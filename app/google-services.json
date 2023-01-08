@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "528783549938",
+    "project_id": "e-learning-e8097",
+    "storage_bucket": "e-learning-e8097.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528783549938:android:8692b0bc6bff3ddf29b76b",
+        "android_client_info": {
+          "package_name": "com.babimumba.e_learning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528783549938-6ib3dm5hhgpvct6fnt0gn5lbahd99p89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babimumba.e_learning",
+            "certificate_hash": "209834108b83db17f270d06aadc0ffa5c4916357"
+          }
+        },
+        {
+          "client_id": "528783549938-djh9v0j8df76lettruetqmf9ub3lfd0k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCisQVkvxb9hVEmzLJ4bco3eKzQFlX34zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528783549938-djh9v0j8df76lettruetqmf9ub3lfd0k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
