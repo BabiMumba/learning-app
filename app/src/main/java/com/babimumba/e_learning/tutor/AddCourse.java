@@ -14,8 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.elearningapp.AddVideoActivity;
-import com.example.elearningapp.R;
+import com.babimumba.e_learning.AddVideoActivity;
+import com.babimumba.e_learning.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
