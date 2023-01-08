@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.elearningapp.R;
+import com.babimumba.e_learning.R;
 
 public class UserRealDashboard extends AppCompatActivity {
 

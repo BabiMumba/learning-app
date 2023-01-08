@@ -7,10 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.elearningapp.CourseListAdapter;
-import com.example.elearningapp.ModelCourse;
-import com.example.elearningapp.R;
-import com.example.elearningapp.tutor.AddCourse;
+import com.babimumba.e_learning.CourseListAdapter;
+import com.babimumba.e_learning.ModelCourse;
+import com.babimumba.e_learning.R;
+import com.babimumba.e_learning.tutor.AddCourse;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

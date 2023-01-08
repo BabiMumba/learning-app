@@ -12,8 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.elearningapp.R;
-import com.example.elearningapp.admin.AdminRegister;
+import com.babimumba.e_learning.R;
+import com.babimumba.e_learning.admin.AdminRegister;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
