@@ -7,9 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.elearningapp.admin.AdminLogin;
-import com.example.elearningapp.tutor.TutorLogin;
-import com.example.elearningapp.user.UserLogin;
+import com.babimumba.e_learning.admin.AdminLogin;
+import com.babimumba.e_learning.tutor.TutorLogin;
+import com.babimumba.e_learning.user.UserLogin;
 
 public class MainActivity extends AppCompatActivity {
 
