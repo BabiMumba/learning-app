@@ -17,6 +17,57 @@
          android:theme="@style/Theme.ELearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".user.UserRealDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".PlayCourse"
+            android:exported="true" />
+        <activity
+            android:name=".tutor.AddCourse"
+            android:exported="true" />
+        <activity
+            android:name=".PlayVideo"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AdminResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".tutor.TutorResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".user.UserResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AdminDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".tutor.TutorDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".user.UserDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AdminRegister"
+            android:exported="true" />
+        <activity
+            android:name=".tutor.TutorRegister"
+            android:exported="true" />
+        <activity
+            android:name=".user.UserRegister"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AdminLogin"
+            android:exported="true" />
+        <activity
+            android:name=".tutor.TutorLogin"
+            android:exported="true" />
+        <activity
+            android:name=".user.UserLogin"
+            android:exported="true" />
+        <activity
+            android:name=".AddVideoActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
