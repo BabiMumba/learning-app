@@ -83,18 +83,15 @@ public class AddCourse extends AppCompatActivity implements AdapterView.OnItemSe
             hashMap2.put("category", courseCategory);
 
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference(AddCourse.COURSES).child(username);
-            reference.child(title).setValue(hashMap2).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                    progressDialog.dismiss();
-                    Intent intent1 = new Intent(AddCourse.this, AddVideoActivity.class);
-                    intent1.putExtra("title", title);
-                    intent1.putExtra("totalLessons", totalLessons);
-                    intent1.putExtra("category", courseCategory);
-                    intent1.putExtra("username", username);
-                    intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent1);
-                }
+            reference.child(title).setValue(hashMap2).addOnSuccessListener(unused -> {
+                progressDialog.dismiss();
+                Intent intent1 = new Intent(AddCourse.this, AddVideoActivity.class);
+                intent1.putExtra("title", title);
+                intent1.putExtra("totalLessons", totalLessons);
+                intent1.putExtra("category", courseCategory);
+                intent1.putExtra("username", username);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent1);
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
