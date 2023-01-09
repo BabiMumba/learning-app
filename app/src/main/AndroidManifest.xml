@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.babimumba.e_learning">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -17,8 +17,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-         android:theme="@style/Theme.ELearningApp"
+        android:theme="@style/Theme.ELearningApp"
         tools:targetApi="31">
+        <activity
+            android:name=".NestedActivity"
+            android:exported="false" />
         <activity
             android:name=".user.UserRealDashboard"
             android:exported="true" />
