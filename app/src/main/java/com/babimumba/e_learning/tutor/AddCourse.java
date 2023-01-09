@@ -81,7 +81,6 @@ public class AddCourse extends AppCompatActivity implements AdapterView.OnItemSe
             hashMap2.put("tutor", username);
             hashMap2.put("totalLessons", totalLessons);
             hashMap2.put("category", courseCategory);
-
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference(AddCourse.COURSES).child(username);
             reference.child(title).setValue(hashMap2).addOnSuccessListener(unused -> {
                 progressDialog.dismiss();

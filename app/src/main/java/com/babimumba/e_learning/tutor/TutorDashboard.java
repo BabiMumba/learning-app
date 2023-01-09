@@ -37,12 +37,9 @@ public class TutorDashboard extends AppCompatActivity {
         addVideoBtn = findViewById(R.id.addVideoBtn);
         Intent intent = getIntent();
         username = intent.getStringExtra("username");
-        addVideoBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(TutorDashboard.this, AddCourse.class).putExtra("username", username));
-            }
-        });
+        addVideoBtn.setOnClickListener(v ->
+                startActivity(new Intent(TutorDashboard.this, AddCourse.class).putExtra("username", username)
+                ));
 
         videosRv = findViewById(R.id.courseRv);
 
