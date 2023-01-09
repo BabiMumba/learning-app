@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             app:iss_auto_cycle="true"
+            app:iss_placeholder="@drawable/placeholder"
             app:iss_delay="0"
             app:iss_period="1000" />
 
