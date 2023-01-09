@@ -92,12 +92,9 @@ public class AddCourse extends AppCompatActivity implements AdapterView.OnItemSe
                 intent1.putExtra("username", username);
                 intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent1);
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    progressDialog.dismiss();
-                    Toast.makeText(AddCourse.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                }
+            }).addOnFailureListener(e -> {
+                progressDialog.dismiss();
+                Toast.makeText(AddCourse.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             });
 
         });
