@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.holder> {
 
     Context context;
-    ArrayList<ModelVideo> videoArrayList = new ArrayList<>();
+    ArrayList<ModelVideo> videoArrayList;
 
     public VideoListAdapter(Context context, ArrayList<ModelVideo> videoArrayList) {
         this.context = context;

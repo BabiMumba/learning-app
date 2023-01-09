@@ -51,34 +51,23 @@ public class PlayVideo extends AppCompatActivity {
         videoView.setVideoURI(videoUri);
         videoView.requestFocus();
 
-        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                mediaPlayer.start();
-            }
-        });
+        videoView.setOnPreparedListener(MediaPlayer::start);
 
-        videoView.setOnInfoListener(new MediaPlayer.OnInfoListener() {
-            @Override
-            public boolean onInfo(MediaPlayer mp, int what, int extra) {
+        videoView.setOnInfoListener((mp, what, extra) -> {
 
-                switch (what) {
-                    case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START: {
-                        progressBar.setVisibility(View.VISIBLE);
-                        return true;
-                    }
-                    case MediaPlayer.MEDIA_INFO_BUFFERING_START: {
-                        progressBar.setVisibility(View.VISIBLE);
-                        return true;
-                    }
-                    case MediaPlayer.MEDIA_INFO_BUFFERING_END: {
-                        progressBar.setVisibility(View.GONE);
-                        return true;
-                    }
+            switch (what) {
+                case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START:
+                case MediaPlayer.MEDIA_INFO_BUFFERING_START: {
+                    progressBar.setVisibility(View.VISIBLE);
+                    return true;
                 }
-
-                return false;
+                case MediaPlayer.MEDIA_INFO_BUFFERING_END: {
+                    progressBar.setVisibility(View.GONE);
+                    return true;
+                }
             }
+
+            return false;
         });
 
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
