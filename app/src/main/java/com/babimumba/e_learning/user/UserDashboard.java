@@ -36,7 +36,6 @@ public class UserDashboard extends AppCompatActivity {
 
         Intent intent = getIntent();
         category = intent.getStringExtra(UserRealDashboard.CATEGORY);
-
         loadCourseList();
 
     }

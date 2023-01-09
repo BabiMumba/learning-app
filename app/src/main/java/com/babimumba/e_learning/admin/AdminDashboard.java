@@ -30,7 +30,6 @@ public class AdminDashboard extends AppCompatActivity {
         setContentView(R.layout.activity_admin_dashboard);
 
         videosRv = findViewById(R.id.courseRv);
-
         loadCourseList();
 
     }
