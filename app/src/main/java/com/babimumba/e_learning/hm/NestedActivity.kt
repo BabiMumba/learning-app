@@ -16,9 +16,9 @@ class NestedActivity : AppCompatActivity() {
 // imageList.add(SlideModel("String Url" or R.drawable)
 // imageList.add(SlideModel("String Url" or R.drawable, "title") You can add title
 
-        imageList.add(SlideModel("https://bit.ly/2YoJ77H", "The animal population decreased by 58 percent in 42 years."))
-        imageList.add(SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct."))
-        imageList.add(SlideModel("https://bit.ly/3fLJf72", "And people do that."))
+        imageList.add(SlideModel("https://www.esisalama.com/assets/img/carousel/banner_principale.jpg", "Ecole superieur d'informatique salama"))
+        imageList.add(SlideModel("https://www.esisalama.com/assets/img/carousel/banner_genie_log.png", "reseau informatique"))
+        imageList.add(SlideModel("https://www.esisalama.com/assets/img/carousel/banner_design.png", "DEsign est multimedia"))
 
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider)
         imageSlider.setImageList(imageList)
