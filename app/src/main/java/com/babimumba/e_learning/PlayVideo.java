@@ -70,12 +70,7 @@ public class PlayVideo extends AppCompatActivity {
             return false;
         });
 
-        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.start();
-            }
-        });
+        videoView.setOnCompletionListener(MediaPlayer::start);
 
     }
 }

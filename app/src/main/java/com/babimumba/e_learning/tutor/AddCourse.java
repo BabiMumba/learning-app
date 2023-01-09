@@ -68,44 +68,41 @@ public class AddCourse extends AppCompatActivity implements AdapterView.OnItemSe
 
         spinner.setAdapter(ad);
 
-        cv_proceed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.show();
-                String title = et_courseTitle.getText().toString();
-                String totalLessons = et_totalLessons.getText().toString();
-                String timestamp = String.valueOf(System.currentTimeMillis());
+        cv_proceed.setOnClickListener(v -> {
+            progressDialog.show();
+            String title = et_courseTitle.getText().toString();
+            String totalLessons = et_totalLessons.getText().toString();
+            String timestamp = String.valueOf(System.currentTimeMillis());
 
-                HashMap<String, String> hashMap2 = new HashMap<>();
-                hashMap2.put("id", mAuth.getUid());
-                hashMap2.put("title", title);
-                hashMap2.put("timestamp", timestamp);
-                hashMap2.put("tutor", username);
-                hashMap2.put("totalLessons", totalLessons);
-                hashMap2.put("category", courseCategory);
+            HashMap<String, String> hashMap2 = new HashMap<>();
+            hashMap2.put("id", mAuth.getUid());
+            hashMap2.put("title", title);
+            hashMap2.put("timestamp", timestamp);
+            hashMap2.put("tutor", username);
+            hashMap2.put("totalLessons", totalLessons);
+            hashMap2.put("category", courseCategory);
 
-                DatabaseReference reference = FirebaseDatabase.getInstance().getReference(AddCourse.COURSES).child(username);
-                reference.child(title).setValue(hashMap2).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        progressDialog.dismiss();
-                        Intent intent = new Intent(AddCourse.this, AddVideoActivity.class);
-                        intent.putExtra("title", title);
-                        intent.putExtra("totalLessons", totalLessons);
-                        intent.putExtra("category", courseCategory);
-                        intent.putExtra("username", username);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        progressDialog.dismiss();
-                        Toast.makeText(AddCourse.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference(AddCourse.COURSES).child(username);
+            reference.child(title).setValue(hashMap2).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                    progressDialog.dismiss();
+                    Intent intent1 = new Intent(AddCourse.this, AddVideoActivity.class);
+                    intent1.putExtra("title", title);
+                    intent1.putExtra("totalLessons", totalLessons);
+                    intent1.putExtra("category", courseCategory);
+                    intent1.putExtra("username", username);
+                    intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent1);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    progressDialog.dismiss();
+                    Toast.makeText(AddCourse.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
-            }
         });
 
     }
